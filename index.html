@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>exercice 1</title>
+</head>
+<body>
+  <button type="button" name="buttonLess" id="less" >-</button>
+  <label for="compter"></label><input type="text" name="valeur" value="0" id="valeur" />
+  <button type="button" name="buttonMore" id="more" >+</button>
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous">
+  </script>
+  <script>
+  $(function(){
+    $('#less').click(function(){
+      var less = $('#valeur').val();
+      $('#valeur').val(parseInt(less) - 1);
+    })
+    $("#more").click(function(){
+      var nbclics = $('#valeur').val();
+      $("#valeur").val(parseInt(nbclics) + 1);
+    });
+  });
+  </script>
+</body>
+</html>

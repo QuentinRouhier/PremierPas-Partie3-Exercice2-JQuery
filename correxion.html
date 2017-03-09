@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>Exercice 2</title>
+ <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+ <button type="button" name="buttonUp" id="up"> + </button>
+ <button type="button" name="buttonDown" id="down"> - </button>
+ <p> 0 </p>
+ <script
+ src="https://code.jquery.com/jquery-2.2.4.min.js"
+ integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+ crossorigin="anonymous">
+ </script>
+ <script>
+ $(function(){
+   var nb = 0;
+   // ajout d'une fonction clique à l'id UP
+   $("#up").click(function(){
+     // nb + 1
+     nb++;
+     //affiche l'ajout de 1 à la valeur de nb
+     $("p").text(nb);
+   });
+   // ajout d'une fonction clique à l'id down
+   $("#down").click(function(){
+     // nb - 1
+     nb--;
+     // affiche -1 à la valeur de nb
+     $("p").text(nb);
+   });
+ });
+ </script>
+</body>
+</html>
